@@ -1,0 +1,9 @@
+<div class="side-nav fixed">
+    <ul class="collection with-header">
+        <li class="collection-header"><h4>Contacts</h4></li>
+        <a ng-click="showContactInfo(contact)" class="collection-item repeated-item" ng-repeat="contact in contacts track by $index">
+            {{contact.firstName}}
+            <i ng-click="deleteContact(contact)" ui-sref="conditions" class="remove-item tiny material-icons">delete</i>
+        </a>
+    </ul>
+</div>

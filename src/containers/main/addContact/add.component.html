@@ -1,0 +1,28 @@
+<form class="col s12" name="contactForm" novalidate ng-submit="addContact(contact); contact = null;">
+    <div class="row">
+        <h1>Add a new contact</h1>
+        <div class="input-field col s12 m6">
+            <input required type="text" ng-model="contact.firstName" id="firstName" class="validate"/>
+            <label class="active" for="firstName">First Name</label>
+        </div>
+        <div class="input-field col s12 m6">
+            <input required type="text" ng-model="contact.lastName" id="lastName" class="validate"/>
+            <label class="active" for="lastName">Last Name</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 m6">
+            <input required type="tel" ng-model="contact.phone" id="phone" class="validate" />
+            <label class="active" for="phone">Phone Number</label>
+        </div>
+        <div class="input-field col s12 m6">
+            <input required type="email" ng-model="contact.email" id="email" class="validate" />
+            <label class="active" for="email">Email</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <button ng-disabled="contactForm.$invalid" type="submit" class="waves-effect waves-light btn">Submit</a>
+        </div>
+    </div>
+</form>
